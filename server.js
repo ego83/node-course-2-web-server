@@ -54,6 +54,15 @@ app.get('/about', (req, res) => {
   // res.send('about page');
 });
 
+app.get('/project', (req, res) => {
+  res.render('project', {
+    titleTag: 'Project page',
+    title: 'Project title dyn',
+    welcomeMsg: 'hello on my project',
+  });
+  // res.send('about page');
+});
+
 app.listen(port, () => {
   console.log(`server is up on port ${port}`);
 });
